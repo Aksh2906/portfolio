@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Design tokens ───────────────────────────────────────────────────────── */
+:root {
+  /* dark (default) */
+  --bg:             #0f1117;
+  --bg-card:        #161b27;
+  --bg-hover:       #1c2333;
+  --border:         #252d3d;
+  --text:           #d4dae8;
+  --text-head:      #f0f4ff;
+  --muted:          #6b7590;
+  --dim:            #3d4561;
+
+  --blue:           #4c9eff;
+  --blue-bg:        #122040;
+  --blue-border:    #1e3d6e;
+  --purple:         #a78bfa;
+  --purple-bg:      #1e1535;
+  --purple-border:  #3d2870;
+  --green:          #34d399;
+  --green-bg:       #0b2e20;
+  --green-border:   #164f38;
+  --orange:         #fb923c;
+  --orange-bg:      #2a1508;
+  --orange-border:  #5a2e0e;
+  --pink:           #f472b6;
+  --pink-bg:        #2d0e22;
+  --pink-border:    #5e1a42;
+
+  --nav-bg:         rgba(15,17,23,0.92);
+  --skill-game-bg:  #122040;
+  --skill-ml-bg:    #1e1535;
+  --skill-tools-bg: #0b2e20;
+}
+
+[data-theme="light"] {
+  --bg:             #f4efe6;
+  --bg-card:        #fdfaf5;
+  --bg-hover:       #ede7db;
+  --border:         #ddd5c8;
+  --text:           #302820;
+  --text-head:      #1a1208;
+  --muted:          #7a6e62;
+  --dim:            #b5a99a;
+
+  --blue:           #1a64c8;
+  --blue-bg:        #ddeeff;
+  --blue-border:    #90bef0;
+  --purple:         #6d28d9;
+  --purple-bg:      #ede9fe;
+  --purple-border:  #c4b5fd;
+  --green:          #047857;
+  --green-bg:       #d1fae5;
+  --green-border:   #6ee7b7;
+  --orange:         #b45309;
+  --orange-bg:      #fef3c7;
+  --orange-border:  #fcd34d;
+  --pink:           #be185d;
+  --pink-bg:        #fce7f3;
+  --pink-border:    #f9a8d4;
+
+  --nav-bg:         rgba(244,239,230,0.92);
+  --skill-game-bg:  #ddeeff;
+  --skill-ml-bg:    #ede9fe;
+  --skill-tools-bg: #d1fae5;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  a { text-decoration: none; color: inherit; }
+}
+
+@layer utilities {
+  .section-pad { @apply py-20; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.12em; text-transform: uppercase;
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-label::before {
+    content: '';
+    display: block; width: 3px; height: 12px;
+    border-radius: 2px; flex-shrink: 0;
+    background: var(--label-color, var(--blue));
+  }
+}
+
+@layer components {
+  .btn-base {
+    @apply inline-flex items-center gap-1.5 px-[14px] py-2 rounded-md
+           text-[13px] font-medium transition-all duration-150 no-underline;
+    font-family: 'IBM Plex Mono', monospace;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--bg-card);
+  }
+  .btn-base:hover { background: var(--bg-hover); border-color: var(--dim); }
+
+  .btn-blue {
+    @apply btn-base;
+    background: var(--blue-bg);
+    border-color: var(--blue-border);
+    color: var(--blue);
+  }
+  .btn-blue:hover { filter: brightness(1.12); }
+
+  .btn-purple {
+    @apply btn-base;
+    background: var(--purple-bg);
+    border-color: var(--purple-border);
+    color: var(--purple);
+  }
+  .btn-purple:hover { filter: brightness(1.12); }
+}
+
+/* ── Hover utilities (CSS-only, no JS event handlers needed) ─────────────── */
+
+/* Nav links */
+.nav-link {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+.nav-link:hover { color: var(--text-head); }
+
+/* Project cards */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+.project-card:hover {
+  background: var(--bg-hover);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+}
+
+/* Academic stat cards */
+.academic-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: border-color 0.15s;
+}
+.academic-stat:hover { border-color: var(--dim); }
+
+/* Contact link rows */
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.contact-link-row:hover {
+  background: var(--bg-hover);
+  border-color: var(--dim);
+}
