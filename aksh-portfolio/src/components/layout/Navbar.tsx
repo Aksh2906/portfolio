@@ -1,15 +1,16 @@
 'use client'
 
 // Navbar — 'use client' required only for ThemeToggle import
+import { PERSONAL } from '@/lib/data'
 import ThemeToggle from '@/components/ui/ThemeToggle'
 
 const NAV_ITEMS = [
-  { href: '#about',        label: 'about' },
-  { href: '#academics',    label: 'academics' },
-  { href: '#skills',       label: 'skills' },
-  { href: '#projects',     label: 'projects' },
-  { href: '#achievements', label: 'achievements' },
-  { href: '#contact',      label: 'contact' },
+  { href: '#about',        label: 'About' },
+  { href: '#academics',    label: 'Academics' },
+  { href: '#skills',       label: 'Skills' },
+  { href: '#projects',     label: 'Projects' },
+  { href: '#achievements', label: 'Achievements' },
+  { href: '#contact',      label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -28,7 +29,7 @@ export default function Navbar() {
         className="font-mono text-sm font-semibold flex items-center gap-1.5"
         style={{ color: 'var(--text-head)' }}
       >
-        Aksh Aggarwal
+        {PERSONAL.name}
         <span
           className="w-[7px] h-[7px] rounded-full flex-shrink-0"
           style={{ background: 'var(--blue)' }}

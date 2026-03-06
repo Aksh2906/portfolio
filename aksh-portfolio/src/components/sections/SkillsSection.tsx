@@ -11,12 +11,19 @@ const GROUP_META: Record<string, { type: GroupType; color: string; bg: string; b
     border: 'var(--blue-border)',
     skillBg: 'var(--blue-bg)',
   },
-  'ML / Vision': {
+  'Machine Learning': {
     type: 'ml',
     color: 'var(--purple)',
     bg: 'var(--skill-ml-bg)',
     border: 'var(--purple-border)',
     skillBg: 'var(--purple-bg)',
+  },
+  'Computer Vision': {
+    type: 'tools',
+    color: 'var(--pink)',
+    bg: 'var(--pink-bg)',
+    border: 'var(--pink-border)',
+    skillBg: 'var(--pink-bg)',
   },
   Tools: {
     type: 'tools',

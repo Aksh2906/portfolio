@@ -9,8 +9,7 @@ export const PERSONAL = {
   github: 'https://github.com/Aksh2906',
   linkedin: 'https://www.linkedin.com/in/aksh-aggarwal-gd/',
   itchio: 'https://akshaggarwal.itch.io/',
-  // TODO: Replace with Google Drive resume link when available
-  resume: '#',
+  resume: '/resume.pdf',
 }
 
 export const SKILLS: { group: string; items: string[] }[] = [
@@ -120,6 +119,7 @@ export interface Achievement {
   title: string
   event: string
   description: string
+  accent?: 'orange' | 'green'
 }
 
 export const ACHIEVEMENTS: Achievement[] = [
@@ -127,5 +127,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: 'Starcade Game Jam — Winner',
     event: 'Cosmology Club × Joystix DTU',
     description: 'Won with Protocol Override, a fast-paced game built under jam conditions.',
+    accent: 'green',
   },
 ]

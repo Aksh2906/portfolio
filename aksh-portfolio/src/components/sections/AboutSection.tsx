@@ -5,7 +5,7 @@ export default function AboutSection() {
       <div className="max-w-content mx-auto px-6">
         <p className="section-label">About</p>
 
-        <div className="space-y-4 max-w-[620px] text-[15px] text-text leading-[1.75]">
+        <div className="space-y-4 max-w-[620px] text-[15px] leading-[1.75]" style={{ color: 'var(--text)' }}>
           <p>
             I&apos;m a student developer who enjoys building games and experimenting with systems
             that blur the line between physical and digital. Most of my time goes into Unity

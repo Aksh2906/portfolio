@@ -70,13 +70,11 @@ export default function HeroSection() {
             ↗ Itch.io
           </a>
           <a href="#projects" className="btn-base">Projects</a>
-          {/* TODO: Replace PERSONAL.resume with Google Drive link when available */}
           <a
             href={PERSONAL.resume}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-base"
-            style={{ opacity: 0.5, cursor: 'not-allowed' }}
-            title="Resume coming soon"
-            aria-disabled="true"
           >
             Resume ↓
           </a>
