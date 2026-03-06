@@ -28,7 +28,7 @@ export default function Navbar() {
         className="font-mono text-sm font-semibold flex items-center gap-1.5"
         style={{ color: 'var(--text-head)' }}
       >
-        aksh aggarwal
+        Aksh Aggarwal
         <span
           className="w-[7px] h-[7px] rounded-full flex-shrink-0"
           style={{ background: 'var(--blue)' }}

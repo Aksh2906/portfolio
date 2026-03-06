@@ -19,13 +19,17 @@ export const SKILLS: { group: string; items: string[] }[] = [
     items: ['Unity', 'C#', 'Game mechanics', 'Player movement', 'Multiplayer', 'Photon PUN'],
   },
   {
-    group: 'ML / Vision',
-    items: ['Python', 'PyTorch', 'CNN', 'MediaPipe', 'Computer vision', 'ANN'],
+    group: 'Machine Learning',
+    items: ['Python', 'PyTorch', 'CNN', 'ANN'],
+  },
+  {
+    group: 'Computer Vision',
+    items: ['MediaPipe', 'Computer vision'],
   },
   {
     group: 'Tools',
-    items: ['Git', 'VS Code', 'Unity Editor', 'APIs'],
-  },
+    items: ['Git', 'VS Code', 'Unity Editor'],
+  }, 
 ]
 
 export interface Project {
