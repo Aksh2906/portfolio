@@ -129,4 +129,23 @@ export const ACHIEVEMENTS: Achievement[] = [
     description: 'Won with Protocol Override, a fast-paced game built under jam conditions.',
     accent: 'green',
   },
+  {
+    title: 'HACK4DELHI — Finalist',
+    event: 'HACK4DELHI',
+    description: 'Finalist with a project for implementing smart parking system.',
+    accent: 'orange',
+  },
+  {
+    title: 'WIEgnite 3.0 — Finalist',
+    event: 'WIEgnite 3.0,IGDTUW',
+    description: 'Finalist with project CricTwin.',
+    accent: 'orange',
+  },
+  {
+    title: 'HeistGPT — Winner',
+    event: 'INVICTUS 2026, DTU',
+    description: 'Won with HeistGPT, a project for implementing image segmentation.',
+    accent: 'green',
+  },
+
 ]
